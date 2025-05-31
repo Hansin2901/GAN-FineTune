@@ -207,7 +207,7 @@ class GANFineTuner:
         # Generate final sample and plot losses
         self.generate_sample(all_notes, "finetuned_final")
         self.plot_losses("finetuning_losses.png")
-          print("Fine-tuning completed!")
+        print("Fine-tuning completed!")
 
     def generate_sample(self, input_notes, filename):
         """
@@ -239,7 +239,7 @@ class GANFineTuner:
                     scaled_x = (x + 1) / 2  # Now in range [0, 1]
                     index = int(scaled_x * (n_vocab - 1))  # Now in range [0, n_vocab-1]
                     index = np.clip(index, 0, n_vocab - 1)  # Ensure within bounds
-                      if index < len(pitchnames):
+                    if index < len(pitchnames):
                         pred_notes_mapped.append(int_to_note[index])
                     else:
                         pred_notes_mapped.append('C5')  # Default fallback

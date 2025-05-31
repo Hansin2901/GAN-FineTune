@@ -55,9 +55,8 @@ def setup_data_folder():
 def run_basic_finetune():
     """Run basic fine-tuning"""
     print("🚀 Starting basic fine-tuning...")
-    
-    try:
-        from finetune_gan_fixed import GANFineTuner
+      try:
+        from finetune_gan import GANFineTuner
         
         # Initialize and run
         finetuner = GANFineTuner()

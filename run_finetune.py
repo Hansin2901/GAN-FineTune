@@ -57,7 +57,7 @@ def run_basic_finetune():
     print("🚀 Starting basic fine-tuning...")
     
     try:
-        from finetune_gan import GANFineTuner
+        from finetune_gan_fixed import GANFineTuner
         
         # Initialize and run
         finetuner = GANFineTuner()
@@ -74,6 +74,8 @@ def run_basic_finetune():
         
     except Exception as e:
         print(f"❌ Error during fine-tuning: {e}")
+        import traceback
+        traceback.print_exc()
         return False
     
     return True
